@@ -16,25 +16,35 @@
     
 </body>
 <script type="text/babel">
+    function sum(a,b)
+    {
+        return a+b;
+    }
     function App () {
         let name = "Meghna";
         let experince = 3;
         let nullVar=null;
         let unde;
         let bool = false;
+        const header = <h2> Welcome </h2>
         return  (
         <>
         <h1>Let us learn JSX , {name} , experience:{experince} </h1>
+        {header}
         <p>
             Null Var: {nullVar}
         <br/>
             Undefined : {unde}
         <br/>
             Boolean : {bool.toString()}
+        <br/>
+            SUM : {sum(2,3)}
         </p>
+
         </>
         );
     }
+    
     ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
 </script>
 </html>
